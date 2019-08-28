@@ -10,6 +10,9 @@
     </script>
   </head>
   <body class="container">
+
+      
+
     <div id="task">
       <h1>Funkcijas un to izsaukumi</h1>
       <ol>
@@ -23,6 +26,9 @@
       <button class="col-md-auto btn btn-danger" onClick="samazinat()">Samazināt</button>
       <input class="col-md-3 form-control" type="text" id="vertiba" value="0" />
       <button class="col-md-auto btn btn-success" onClick="palielinat()">Palielināt</button>
+
+      <button class="col-md-auto btn btn-primary" onClick="panemt()">Paņemt</button>
+      <input class="col-md-3 form-control" type="text" id="atbilde" value=" " />
     </div>
     <div id="info">
       <h3>Noderīgas saites</h3>
@@ -36,5 +42,22 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <script type="text/javascript">
+      let x=document.getElementById("vertiba").value;
+    console.log(x);
+    function samazinat (){
+      x=document.getElementById("vertiba").value;
+      if (x>0)
+      document.getElementById("vertiba").value--;
+    }
+    function palielinat (){
+      document.getElementById("vertiba").value++;
+    }
+    function panemt (){
+      document.getElementById("atbilde").value=document.getElementById("vertiba").value;
+    }
+      </script>
+  
   </body>
 </html>
